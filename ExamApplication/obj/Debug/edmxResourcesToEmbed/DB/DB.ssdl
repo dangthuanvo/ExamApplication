@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExamApplicationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Lecture">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="data" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="question" Type="varchar(max)" />
+    <Property Name="A" Type="varchar(max)" />
+    <Property Name="B" Type="varchar(max)" />
+    <Property Name="C" Type="varchar(max)" />
+    <Property Name="D" Type="varchar(max)" />
+    <Property Name="correct_answer" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="QuestionExample">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="question" Type="varchar(max)" />
+    <Property Name="A" Type="varchar(max)" />
+    <Property Name="B" Type="varchar(max)" />
+    <Property Name="C" Type="varchar(max)" />
+    <Property Name="D" Type="varchar(max)" />
+    <Property Name="correct_answer" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityContainer Name="ExamApplicationModelStoreContainer">
+    <EntitySet Name="Lecture" EntityType="Self.Lecture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuestionExample" EntityType="Self.QuestionExample" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

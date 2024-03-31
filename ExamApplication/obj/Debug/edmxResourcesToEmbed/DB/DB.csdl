@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExamApplicationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Lecture">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="data" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="question1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="A" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="B" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="C" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="D" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="correct_answer" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="QuestionExample">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="question" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="A" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="B" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="C" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="D" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="correct_answer" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ExamApplicationEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Lectures" EntityType="Self.Lecture" />
+    <EntitySet Name="Questions" EntityType="Self.Question" />
+    <EntitySet Name="QuestionExamples" EntityType="Self.QuestionExample" />
+  </EntityContainer>
+</Schema>
