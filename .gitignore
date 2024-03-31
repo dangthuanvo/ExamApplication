@@ -387,3 +387,4 @@ InteropTests/NativeTests/out
 **/ScratchProjectWithInternals/
 .vs/ExamApplication/v17/.suo
 /.vs
+/.vs/ExamApplication
