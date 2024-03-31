@@ -34,5 +34,11 @@ namespace ExamApplication.UI.Admin
             a.ShowDialog();
             this.Close();
         }
+
+        private void examButton_Click(object sender, EventArgs e)
+        {
+            title.Text = "SOẠN CÂU HỎI THI THẬT";
+            loadform(new QuestionAdmin());
+        }
     }
 }
