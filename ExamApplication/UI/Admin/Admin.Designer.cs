@@ -65,6 +65,7 @@
             this.lectureButton.Size = new System.Drawing.Size(146, 59);
             this.lectureButton.TabIndex = 0;
             this.lectureButton.Text = "SOẠN CÂU HỎI THI THỬ";
+            this.lectureButton.Click += new System.EventHandler(this.lectureButton_Click);
             // 
             // examButton
             // 

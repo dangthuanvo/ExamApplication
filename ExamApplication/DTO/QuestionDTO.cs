@@ -11,7 +11,7 @@ namespace ExamApplication.DTO
         public string B { get; set; }
         public string C { get; set; }
         public string D { get; set; }
-        public char correct_answer { get; set; }
+        public string correct_answer { get; set; }
         public bool isimportant { get; set; }
 
     }

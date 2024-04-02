@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace ExamApplication.UI.Admin
 {
-    public partial class QuestionAdmin : Form
+    public partial class QuestionExampleAdmin : Form
     {
-        QuestionService questionservice = new QuestionService();
+        QuestionExampleService questionservice = new QuestionExampleService();
         private int currentid;
-        public QuestionAdmin()
+        public QuestionExampleAdmin()
         {
             InitializeComponent();
             DelButton.Visible = false;
@@ -65,7 +65,7 @@ namespace ExamApplication.UI.Admin
             {
                 if (DelButton.Visible == false)
                 {
-                    QuestionDTO entity = new QuestionDTO()
+                    QuestionExampleDTO entity = new QuestionExampleDTO()
                     {
                         A = A.Text,
                         B = B.Text,
@@ -82,7 +82,7 @@ namespace ExamApplication.UI.Admin
                 else
                 {
 
-                    QuestionDTO entity = new QuestionDTO()
+                    QuestionExampleDTO entity = new QuestionExampleDTO()
                     {
                         A = A.Text,
                         B = B.Text,

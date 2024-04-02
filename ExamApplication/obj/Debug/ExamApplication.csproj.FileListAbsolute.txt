@@ -30,3 +30,4 @@ C:\Users\Thuan\source\repos\ExamApplication\ExamApplication\obj\Debug\ExamApplic
 C:\Users\Thuan\source\repos\ExamApplication\ExamApplication\obj\Debug\ExamApplication.UI.Admin.LectureAdmin.resources
 C:\Users\Thuan\source\repos\ExamApplication\ExamApplication\obj\Debug\ExamApplication.UI.Admin.PasswordAsk.resources
 C:\Users\Thuan\source\repos\ExamApplication\ExamApplication\obj\Debug\ExamApplication.UI.Admin.QuestionAdmin.resources
+C:\Users\Thuan\source\repos\ExamApplication\ExamApplication\obj\Debug\ExamApplication.UI.Admin.QuestionExampleAdmin.resources

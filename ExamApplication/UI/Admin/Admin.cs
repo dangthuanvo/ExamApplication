@@ -40,5 +40,11 @@ namespace ExamApplication.UI.Admin
             title.Text = "SOẠN CÂU HỎI THI THẬT";
             loadform(new QuestionAdmin());
         }
+
+        private void lectureButton_Click(object sender, EventArgs e)
+        {
+            title.Text = "SOẠN CÂU HỎI THI THỬ";
+            loadform(new QuestionExampleAdmin());
+        }
     }
 }

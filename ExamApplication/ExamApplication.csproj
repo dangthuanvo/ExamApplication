@@ -87,12 +87,19 @@
     <Compile Include="Model\QuestionExample.cs" />
     <Compile Include="Model\Lecture.cs" />
     <Compile Include="Sẹrvice\LectureService.cs" />
+    <Compile Include="Sẹrvice\QuestionExampleService.cs" />
     <Compile Include="Sẹrvice\QuestionService.cs" />
     <Compile Include="UI\Admin\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Admin\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\QuestionExampleAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\QuestionExampleAdmin.Designer.cs">
+      <DependentUpon>QuestionExampleAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Admin\QuestionAdmin.cs">
       <SubType>Form</SubType>
@@ -149,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Admin\LectureAdmin.resx">
       <DependentUpon>LectureAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\QuestionExampleAdmin.resx">
+      <DependentUpon>QuestionExampleAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Admin\QuestionAdmin.resx">
       <DependentUpon>QuestionAdmin.cs</DependentUpon>

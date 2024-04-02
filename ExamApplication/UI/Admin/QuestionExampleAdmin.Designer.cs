@@ -1,6 +1,6 @@
 ﻿namespace ExamApplication.UI.Admin
 {
-    partial class QuestionAdmin
+    partial class QuestionExampleAdmin
     {
         /// <summary>
         /// Required designer variable.

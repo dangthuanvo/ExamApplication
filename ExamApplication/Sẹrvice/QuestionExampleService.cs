@@ -5,14 +5,14 @@ using Web.Core.Service;
 
 namespace ExamApplication.Sẹrvice
 {
-    public class QuestionService
+    public class QuestionExampleService
     {
-        public virtual List<QuestionDTO> GetAll()
+        public virtual List<QuestionExampleDTO> GetAll()
         {
             using (var context = new MyContext())
             {
-                return context.Questions
-                    .Select(x => new QuestionDTO()
+                return context.QuestionExamples
+                    .Select(x => new QuestionExampleDTO()
                     {
                         id = x.id,
                         question = x.question,
@@ -32,22 +32,22 @@ namespace ExamApplication.Sẹrvice
             {
                 using (var transaction = context.Database.BeginTransaction())
                 {
-                    ExamApplication.Model.Question question = context.Questions.FirstOrDefault(x => x.question == key);
+                    ExamApplication.Model.QuestionExample question = context.QuestionExamples.FirstOrDefault(x => x.question == key);
 
-                    context.Questions.Remove(question);
+                    context.QuestionExamples.Remove(question);
 
                     context.SaveChanges();
                     transaction.Commit();
                 }
             }
         }
-        public virtual QuestionDTO GetByName(string key)
+        public virtual QuestionExampleDTO GetByName(string key)
         {
             using (var context = new MyContext())
             {
-                return context.Questions
+                return context.QuestionExamples
                     .Where(x => x.question == key)
-                   .Select(x => new QuestionDTO()
+                   .Select(x => new QuestionExampleDTO()
                    {
                        id = x.id,
                        question = x.question,
@@ -61,11 +61,11 @@ namespace ExamApplication.Sẹrvice
                    .FirstOrDefault();
             }
         }
-        public virtual QuestionDTO Insert(QuestionDTO entity)
+        public virtual QuestionExampleDTO Insert(QuestionExampleDTO entity)
         {
             using (var context = new MyContext())
             {
-                ExamApplication.Model.Question question = new ExamApplication.Model.Question()
+                ExamApplication.Model.QuestionExample question = new ExamApplication.Model.QuestionExample()
                 {
                     question = entity.question,
                     A = entity.A,
@@ -75,19 +75,19 @@ namespace ExamApplication.Sẹrvice
                     correct_answer = entity.correct_answer,
                     isimportant = entity.isimportant,
                 };
-                context.Questions.Add(question);
+                context.QuestionExamples.Add(question);
                 context.SaveChanges();
 
                 return entity;
             }
         }
-        public virtual void Update(int key, QuestionDTO entity)
+        public virtual void Update(int key, QuestionExampleDTO entity)
         {
             using (var context = new MyContext())
             {
                 using (var transaction = context.Database.BeginTransaction())
                 {
-                    ExamApplication.Model.Question question = context.Questions.FirstOrDefault(x => x.id == key);
+                    ExamApplication.Model.QuestionExample question = context.QuestionExamples.FirstOrDefault(x => x.id == key);
                     question.question = entity.question;
                     question.A = entity.A;
                     question.B = entity.B;
