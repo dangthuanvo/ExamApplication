@@ -80,15 +80,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\MyContext.cs" />
+    <Compile Include="DTO\HistoryDTO.cs" />
     <Compile Include="DTO\LectureDTO.cs" />
     <Compile Include="DTO\QuestionDTO.cs" />
     <Compile Include="DTO\QuestionExampleDTO.cs" />
+    <Compile Include="DTO\SettingDTO.cs" />
+    <Compile Include="Model\History.cs" />
     <Compile Include="Model\Question.cs" />
     <Compile Include="Model\QuestionExample.cs" />
     <Compile Include="Model\Lecture.cs" />
+    <Compile Include="Model\Setting.cs" />
+    <Compile Include="Sẹrvice\HistoryService.cs" />
     <Compile Include="Sẹrvice\LectureService.cs" />
     <Compile Include="Sẹrvice\QuestionExampleService.cs" />
     <Compile Include="Sẹrvice\QuestionService.cs" />
+    <Compile Include="Sẹrvice\SettingService.cs" />
     <Compile Include="UI\Admin\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,24 @@
     <Compile Include="UI\Admin\QuestionAdmin.Designer.cs">
       <DependentUpon>QuestionAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Admin\AdminAvatar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\AdminAvatar.Designer.cs">
+      <DependentUpon>AdminAvatar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\StudentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\StudentHistory.Designer.cs">
+      <DependentUpon>StudentHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Student\Exam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +142,12 @@
     </Compile>
     <Compile Include="Innit.Designer.cs">
       <DependentUpon>Innit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\Image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\Image.Designer.cs">
+      <DependentUpon>Image.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Student\Lecture.cs">
       <SubType>Form</SubType>
@@ -145,11 +175,29 @@
     <Compile Include="UI\Student\LectureDetail.Designer.cs">
       <DependentUpon>LectureDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Student\StartExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\StartExam.Designer.cs">
+      <DependentUpon>StartExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\StartExamExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\StartExamExample.Designer.cs">
+      <DependentUpon>StartExamExample.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Student\Student.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Student\Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\StudentAvatar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\StudentAvatar.Designer.cs">
+      <DependentUpon>StudentAvatar.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="UI\Admin\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
@@ -163,11 +211,23 @@
     <EmbeddedResource Include="UI\Admin\QuestionAdmin.resx">
       <DependentUpon>QuestionAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\AdminAvatar.resx">
+      <DependentUpon>AdminAvatar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\StudentHistory.resx">
+      <DependentUpon>StudentHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Student\Exam.resx">
       <DependentUpon>Exam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Innit.resx">
       <DependentUpon>Innit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\Image.resx">
+      <DependentUpon>Image.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Student\Lecture.resx">
       <DependentUpon>Lecture.cs</DependentUpon>
@@ -187,8 +247,17 @@
     <EmbeddedResource Include="UI\Student\LectureDetail.resx">
       <DependentUpon>LectureDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\StartExam.resx">
+      <DependentUpon>StartExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\StartExamExample.resx">
+      <DependentUpon>StartExamExample.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Student\Student.resx">
       <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\StudentAvatar.resx">
+      <DependentUpon>StudentAvatar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

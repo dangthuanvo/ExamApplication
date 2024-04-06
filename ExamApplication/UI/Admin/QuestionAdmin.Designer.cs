@@ -44,23 +44,31 @@
             this.DelButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.isimportantcheck = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.imageurl = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowQuestion
             // 
             this.flowQuestion.AutoScroll = true;
-            this.flowQuestion.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowQuestion.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowQuestion.Location = new System.Drawing.Point(0, 0);
             this.flowQuestion.Name = "flowQuestion";
-            this.flowQuestion.Size = new System.Drawing.Size(126, 400);
+            this.flowQuestion.Size = new System.Drawing.Size(125, 400);
             this.flowQuestion.TabIndex = 0;
             this.flowQuestion.WrapContents = false;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 20);
+            this.label1.Location = new System.Drawing.Point(126, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 1;
@@ -68,6 +76,7 @@
             // 
             // question
             // 
+            this.question.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.question.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.question.DefaultText = "";
             this.question.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -77,7 +86,7 @@
             this.question.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.question.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.question.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.question.Location = new System.Drawing.Point(186, 9);
+            this.question.Location = new System.Drawing.Point(184, 2);
             this.question.Name = "question";
             this.question.PasswordChar = '\0';
             this.question.PlaceholderText = "";
@@ -87,8 +96,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 75);
+            this.label2.Location = new System.Drawing.Point(126, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 3;
@@ -96,8 +106,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(128, 120);
+            this.label3.Location = new System.Drawing.Point(126, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 4;
@@ -105,8 +116,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(128, 165);
+            this.label4.Location = new System.Drawing.Point(126, 158);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 5;
@@ -114,8 +126,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(128, 210);
+            this.label5.Location = new System.Drawing.Point(126, 203);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 6;
@@ -123,42 +136,48 @@
             // 
             // A
             // 
-            this.A.Location = new System.Drawing.Point(186, 72);
+            this.A.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.A.Location = new System.Drawing.Point(184, 65);
             this.A.Name = "A";
             this.A.Size = new System.Drawing.Size(463, 20);
             this.A.TabIndex = 7;
             // 
             // B
             // 
-            this.B.Location = new System.Drawing.Point(186, 117);
+            this.B.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.B.Location = new System.Drawing.Point(184, 110);
             this.B.Name = "B";
             this.B.Size = new System.Drawing.Size(463, 20);
             this.B.TabIndex = 8;
             // 
             // C
             // 
-            this.C.Location = new System.Drawing.Point(186, 162);
+            this.C.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.C.Location = new System.Drawing.Point(184, 155);
             this.C.Name = "C";
             this.C.Size = new System.Drawing.Size(463, 20);
             this.C.TabIndex = 9;
             // 
             // D
             // 
-            this.D.Location = new System.Drawing.Point(186, 207);
+            this.D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.D.Location = new System.Drawing.Point(184, 200);
             this.D.Name = "D";
             this.D.Size = new System.Drawing.Size(463, 20);
             this.D.TabIndex = 10;
             // 
             // correctanswer
             // 
-            this.correctanswer.Location = new System.Drawing.Point(204, 253);
+            this.correctanswer.Location = new System.Drawing.Point(628, 281);
             this.correctanswer.Name = "correctanswer";
             this.correctanswer.Size = new System.Drawing.Size(19, 20);
             this.correctanswer.TabIndex = 12;
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(131, 311);
+            this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveButton.Location = new System.Drawing.Point(129, 304);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(518, 42);
             this.saveButton.TabIndex = 13;
@@ -168,7 +187,9 @@
             // 
             // DelButton
             // 
-            this.DelButton.Location = new System.Drawing.Point(131, 359);
+            this.DelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DelButton.Location = new System.Drawing.Point(129, 352);
             this.DelButton.Name = "DelButton";
             this.DelButton.Size = new System.Drawing.Size(518, 42);
             this.DelButton.TabIndex = 14;
@@ -178,8 +199,9 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(128, 256);
+            this.label6.Location = new System.Drawing.Point(552, 284);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 13);
             this.label6.TabIndex = 11;
@@ -187,40 +209,81 @@
             // 
             // isimportantcheck
             // 
+            this.isimportantcheck.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.isimportantcheck.AutoSize = true;
-            this.isimportantcheck.Location = new System.Drawing.Point(131, 279);
+            this.isimportantcheck.Location = new System.Drawing.Point(129, 281);
             this.isimportantcheck.Name = "isimportantcheck";
             this.isimportantcheck.Size = new System.Drawing.Size(116, 17);
             this.isimportantcheck.TabIndex = 16;
             this.isimportantcheck.Text = "Câu hỏi quan trọng";
             this.isimportantcheck.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.flowQuestion);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(125, 400);
+            this.panel1.TabIndex = 17;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.imageurl);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.isimportantcheck);
+            this.panel2.Controls.Add(this.saveButton);
+            this.panel2.Controls.Add(this.DelButton);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.question);
+            this.panel2.Controls.Add(this.correctanswer);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.D);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.C);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.B);
+            this.panel2.Controls.Add(this.A);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(650, 400);
+            this.panel2.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(126, 247);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Hình ảnh";
+            // 
+            // imageurl
+            // 
+            this.imageurl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.imageurl.Location = new System.Drawing.Point(184, 245);
+            this.imageurl.Name = "imageurl";
+            this.imageurl.Size = new System.Drawing.Size(463, 20);
+            this.imageurl.TabIndex = 18;
+            // 
             // QuestionAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 400);
-            this.Controls.Add(this.isimportantcheck);
-            this.Controls.Add(this.DelButton);
-            this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.correctanswer);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.D);
-            this.Controls.Add(this.C);
-            this.Controls.Add(this.B);
-            this.Controls.Add(this.A);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.question);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.flowQuestion);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QuestionAdmin";
             this.Text = "QuestionAdmin";
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -242,5 +305,9 @@
         private System.Windows.Forms.Button DelButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox isimportantcheck;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox imageurl;
+        private System.Windows.Forms.Label label7;
     }
 }

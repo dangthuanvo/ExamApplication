@@ -1,6 +1,7 @@
 ﻿using ExamApplication.DTO;
 using ExamApplication.Sẹrvice;
 using System;
+using System.Net;
 using System.Windows.Forms;
 
 namespace ExamApplication.UI.Admin
@@ -38,6 +39,7 @@ namespace ExamApplication.UI.Admin
             correctanswer.Text = null;
             isimportantcheck.Checked = false;
             DelButton.Visible = false;
+            imageurl.Text = null;
         }
         private void Button_Click(object sender, EventArgs e)
         {
@@ -53,6 +55,7 @@ namespace ExamApplication.UI.Admin
             isimportantcheck.Checked = selectedquestion.isimportant;
             DelButton.Visible = true;
             currentid = selectedquestion.id;
+            imageurl.Text = selectedquestion.imageurl;
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -65,36 +68,53 @@ namespace ExamApplication.UI.Admin
             {
                 if (DelButton.Visible == false)
                 {
-                    QuestionDTO entity = new QuestionDTO()
+                    if (!string.IsNullOrEmpty(imageurl.Text))
                     {
-                        A = A.Text,
-                        B = B.Text,
-                        C = C.Text,
-                        D = D.Text,
-                        question = question.Text,
-                        correct_answer = correctanswer.Text,
-                        isimportant = isimportantcheck.Checked,
-                    };
-                    questionservice.Insert(entity);
-                    MessageBox.Show("Lưu thành công");
-                    flowLoad();
+                        if (IsUrlDownloadable(imageurl.Text))
+                        {
+                            QuestionDTO entity = new QuestionDTO()
+                            {
+                                A = A.Text,
+                                B = B.Text,
+                                C = C.Text,
+                                D = D.Text,
+                                question = question.Text,
+                                correct_answer = correctanswer.Text,
+                                isimportant = isimportantcheck.Checked,
+                                imageurl = imageurl.Text,
+                            };
+                            questionservice.Insert(entity);
+                            MessageBox.Show("Lưu thành công");
+                            flowLoad();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đường link hình ảnh không hợp lệ");
+                        }
+                    }
                 }
                 else
                 {
-
-                    QuestionDTO entity = new QuestionDTO()
+                    if (!string.IsNullOrEmpty(imageurl.Text))
                     {
-                        A = A.Text,
-                        B = B.Text,
-                        C = C.Text,
-                        D = D.Text,
-                        question = question.Text,
-                        correct_answer = correctanswer.Text,
-                        isimportant = isimportantcheck.Checked,
-                    };
-                    questionservice.Update(currentid, entity);
-                    MessageBox.Show("Lưu thành công");
-                    flowLoad();
+                        if (IsUrlDownloadable(imageurl.Text))
+                        {
+                            QuestionDTO entity = new QuestionDTO()
+                            {
+                                A = A.Text,
+                                B = B.Text,
+                                C = C.Text,
+                                D = D.Text,
+                                question = question.Text,
+                                correct_answer = correctanswer.Text,
+                                isimportant = isimportantcheck.Checked,
+                                imageurl = imageurl.Text,
+                            };
+                            questionservice.Update(currentid, entity);
+                            MessageBox.Show("Lưu thành công");
+                            flowLoad();
+                        }
+                    }
                 }
             }
         }
@@ -104,6 +124,37 @@ namespace ExamApplication.UI.Admin
             questionservice.DeleteByName(question.Text);
             MessageBox.Show("Xoá thành công");
             flowLoad();
+        }
+        private bool IsUrlDownloadable(string url)
+        {
+            WebClient webClient = new WebClient();
+
+            try
+            {
+                byte[] imageBytes = webClient.DownloadData(url);
+                // Image downloaded successfully, so return true
+                return true;
+            }
+            catch (WebException ex)
+            {
+                if (ex.Response != null && ex.Response is HttpWebResponse response)
+                {
+                    if (response.StatusCode == HttpStatusCode.NotFound)
+                    {
+                        // Image not found (404)
+                        return false;
+                    }
+                    // Handle other HTTP status codes here if needed
+                }
+                // Handle other exceptions
+            }
+            catch (Exception)
+            {
+                // Handle general exceptions
+            }
+
+            // If the function reaches here, it means the download failed
+            return false;
         }
     }
 }

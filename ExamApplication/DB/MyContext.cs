@@ -13,6 +13,8 @@ namespace Web.Core.Service
         public virtual DbSet<ExamApplication.Model.Lecture> Lectures { get; set; }
         public virtual DbSet<Question> Questions { get; set; }
         public virtual DbSet<QuestionExample> QuestionExamples { get; set; }
+        public virtual DbSet<Setting> Settings { get; set; }
+        public virtual DbSet<History> Histories { get; set; }
 
     }
 }

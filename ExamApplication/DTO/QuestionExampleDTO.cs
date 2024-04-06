@@ -12,5 +12,6 @@ namespace ExamApplication.DTO
         public string D { get; set; }
         public string correct_answer { get; set; }
         public bool isimportant { get; set; }
+        public string imageurl { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace ExamApplication.UI.Admin
         {
             InitializeComponent();
             delButton.Visible = false;
-            flowLoad();
+
         }
         private void flowLoad()
         {
@@ -21,7 +21,7 @@ namespace ExamApplication.UI.Admin
             foreach (var lecture in lectureservice.GetAll())
             {
                 var button = new Guna.UI2.WinForms.Guna2Button();
-                button.Width = 640;
+                button.Width = flowLecture.Width;
                 button.Height = 45;
                 button.Text = lecture.name;
                 button.Click += Button_Click;
@@ -100,6 +100,10 @@ namespace ExamApplication.UI.Admin
             lecturedata.Rtf = null;
             lecturename.Text = null;
             MessageBox.Show("Xoá thành công");
+            flowLoad();
+        }
+        private void LectureAdmin_Load(object sender, EventArgs e)
+        {
             flowLoad();
         }
     }

@@ -8,8 +8,9 @@ namespace ExamApplication.UI.Student
         public Student()
         {
             InitializeComponent();
+            loadform(new StudentAvatar(), "SINH VIÊN");
         }
-        public void loadform(object Form)
+        public void loadform(object Form, string tit)
         {
             if (this.mainpanel.Controls.Count > 0)
                 this.mainpanel.Controls.RemoveAt(0);
@@ -18,24 +19,26 @@ namespace ExamApplication.UI.Student
             f.Dock = DockStyle.Fill;
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
+            title.Text = tit;
             f.Show();
+        }
+        public void Settitle(string a)
+        {
+            title.Text = a;
         }
         private void lectureButton_Click(object sender, EventArgs e)
         {
-            title.Text = "BÀI GIẢNG";
-            loadform(new Lecture());
+            loadform(new Lecture(), "BÀI GIẢNG");
         }
 
         private void examButton_Click(object sender, EventArgs e)
         {
-            title.Text = "BÀI THI THỬ";
-            //loadform(new ExampleExam());
+            loadform(new StartExamExample(), "LÀM BÀI THI THỬ");
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            title.Text = "BÀI THI THỬ";
-            loadform(new Exam());
+            loadform(new StartExam(), "LÀM BÀI THI");
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)

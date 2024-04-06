@@ -33,15 +33,17 @@
             this.examButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.title = new System.Windows.Forms.Label();
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.lectureButton);
             this.flowLayoutPanel1.Controls.Add(this.examButton);
             this.flowLayoutPanel1.Controls.Add(this.guna2Button1);
@@ -58,7 +60,7 @@
             this.lectureButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.lectureButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.lectureButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.lectureButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lectureButton.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lectureButton.ForeColor = System.Drawing.Color.White;
             this.lectureButton.Location = new System.Drawing.Point(3, 3);
             this.lectureButton.Name = "lectureButton";
@@ -73,7 +75,7 @@
             this.examButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.examButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.examButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.examButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.examButton.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.examButton.ForeColor = System.Drawing.Color.White;
             this.examButton.Location = new System.Drawing.Point(3, 68);
             this.examButton.Name = "examButton";
@@ -88,7 +90,7 @@
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(3, 133);
             this.guna2Button1.Name = "guna2Button1";
@@ -99,6 +101,8 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.guna2Button2);
             this.panel1.Controls.Add(this.title);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -107,38 +111,40 @@
             this.panel1.Size = new System.Drawing.Size(650, 50);
             this.panel1.TabIndex = 1;
             // 
-            // title
-            // 
-            this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(6, 9);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(179, 36);
-            this.title.TabIndex = 0;
-            this.title.Text = "BÀI GIẢNG";
-            // 
-            // mainpanel
-            // 
-            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainpanel.Location = new System.Drawing.Point(150, 50);
-            this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(650, 400);
-            this.mainpanel.TabIndex = 2;
-            // 
             // guna2Button2
             // 
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(547, 2);
+            this.guna2Button2.Location = new System.Drawing.Point(548, 0);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(100, 45);
+            this.guna2Button2.Size = new System.Drawing.Size(100, 48);
             this.guna2Button2.TabIndex = 1;
             this.guna2Button2.Text = "TRỞ LẠI";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Location = new System.Drawing.Point(6, 9);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(184, 36);
+            this.title.TabIndex = 0;
+            this.title.Text = "BÀI GIẢNG";
+            // 
+            // mainpanel
+            // 
+            this.mainpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainpanel.Location = new System.Drawing.Point(150, 50);
+            this.mainpanel.Name = "mainpanel";
+            this.mainpanel.Size = new System.Drawing.Size(650, 400);
+            this.mainpanel.TabIndex = 2;
             // 
             // Student
             // 

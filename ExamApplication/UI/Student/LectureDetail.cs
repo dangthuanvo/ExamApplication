@@ -14,5 +14,10 @@ namespace ExamApplication.UI.Student
             //lecturedetaildata.Rtf = lecture.data;
             lecturedetaildata.Rtf = lectureservice.GetByName(all.selectedLecture).data;
         }
+
+        private void guna2Button1_Click(object sender, System.EventArgs e)
+        {
+            (this.ParentForm as Student).loadform(new Lecture(), "BÀI GIẢNG");
+        }
     }
 }

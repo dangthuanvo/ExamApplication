@@ -9,15 +9,16 @@ namespace ExamApplication
         public Innit()
         {
             InitializeComponent();
+            all.innit = this;
         }
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            //var a = new PasswordAsk();
-            //.ShowDialog();
-            this.Hide();
-            var a = new Admin();
+            //this.Hide();
+            //var a = new Admin();
+            //a.ShowDialog();
+            //this.Close();
+            var a = new PasswordAsk();
             a.ShowDialog();
-            this.Close();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -26,6 +27,11 @@ namespace ExamApplication
             var a = new Student();
             a.ShowDialog();
             this.Close();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

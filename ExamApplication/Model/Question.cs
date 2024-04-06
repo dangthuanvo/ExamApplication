@@ -13,6 +13,7 @@ namespace ExamApplication.Model
         public string D { get; set; }
         public string correct_answer { get; set; }
         public bool isimportant { get; set; }
+        public string imageurl { get; set; }
 
     }
 }

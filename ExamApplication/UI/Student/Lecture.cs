@@ -27,7 +27,7 @@ namespace ExamApplication.UI.Student
         {
             var a = sender as Guna.UI2.WinForms.Guna2Button;
             all.selectedLecture = a.Text;
-            (this.ParentForm as Student).loadform(new LectureDetail());
+            (this.ParentForm as Student).loadform(new LectureDetail(), "CHI TIẾT BÀI GIẢNG");
         }
     }
 }

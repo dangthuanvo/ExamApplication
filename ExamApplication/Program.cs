@@ -19,5 +19,10 @@ namespace ExamApplication
     public static class all
     {
         public static string selectedLecture { get; set; }
+        public static string currentStudentName { get; set; }
+        public static string currentStudentId { get; set; }
+        public static DateTime currenttime { get; set; }
+        public static bool isExample { get; set; }
+        public static Form innit { get; set; }
     }
 }
