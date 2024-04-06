@@ -1,6 +1,7 @@
 ﻿using ExamApplication.DTO;
 using ExamApplication.Sẹrvice;
 using System;
+using System.IO;
 using System.Net;
 using System.Windows.Forms;
 
@@ -114,6 +115,10 @@ namespace ExamApplication.UI.Admin
                             MessageBox.Show("Lưu thành công");
                             flowLoad();
                         }
+                        else
+                        {
+                            MessageBox.Show("Đường link hình ảnh không hợp lệ");
+                        }
                     }
                 }
             }
@@ -132,6 +137,8 @@ namespace ExamApplication.UI.Admin
             try
             {
                 byte[] imageBytes = webClient.DownloadData(url);
+                Stream stream = new MemoryStream(imageBytes);
+                System.Drawing.Image a = System.Drawing.Image.FromStream(stream);
                 // Image downloaded successfully, so return true
                 return true;
             }

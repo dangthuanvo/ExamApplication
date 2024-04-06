@@ -85,6 +85,7 @@ namespace ExamApplication.UI.Student
             questionimage.BringToFront();
             questionimage.TopMost = true;
             questionimage.Focus();
+            questionimage.Location = new Point(questionimage.Location.X, questionimage.Location.Y - 400);
         }
         private void LoadQuestionExample()
         {
@@ -182,6 +183,8 @@ namespace ExamApplication.UI.Student
                 }
                 else
                 {
+                    questionimage.Hide();
+                    questionimage.Close();
                     if (all.isExample)
                     {
                         LoadQuestionExample();
@@ -191,8 +194,7 @@ namespace ExamApplication.UI.Student
                         LoadQuestion();
                     }
                 }
-                questionimage.Hide();
-                questionimage.Close();
+
             }
         }
         private void ResetAnswer()

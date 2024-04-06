@@ -114,6 +114,10 @@ namespace ExamApplication.UI.Admin
                             MessageBox.Show("Lưu thành công");
                             flowLoad();
                         }
+                        else
+                        {
+                            MessageBox.Show("Đường link hình ảnh không hợp lệ");
+                        }
                     }
                 }
             }
