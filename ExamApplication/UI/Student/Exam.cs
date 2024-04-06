@@ -49,6 +49,16 @@ namespace ExamApplication.UI.Student
         {
             historyService.Update(all.currentStudentId, score, time);
         }
+        private void CallImage(string imageurl)
+        {
+            questionimage = new Image(imageurl);
+            questionimage.Show();
+            questionimage.WindowState = FormWindowState.Normal;
+            questionimage.BringToFront();
+            questionimage.TopMost = true;
+            questionimage.Focus();
+            questionimage.Location = new Point(questionimage.Location.X, questionimage.Location.Y - 400);
+        }
         private void LoadQuestion()
         {
             question.Text = questions[currentquestion].question;
@@ -76,16 +86,10 @@ namespace ExamApplication.UI.Student
             {
                 D.Visible = false;
             }
-        }
-        private void CallImage(string imageurl)
-        {
-            questionimage = new Image(imageurl);
-            questionimage.Show();
-            questionimage.WindowState = FormWindowState.Normal;
-            questionimage.BringToFront();
-            questionimage.TopMost = true;
-            questionimage.Focus();
-            questionimage.Location = new Point(questionimage.Location.X, questionimage.Location.Y - 400);
+            if (!string.IsNullOrEmpty(questions[currentquestion].imageurl))
+            {
+                CallImage(questions[currentquestion].imageurl);
+            }
         }
         private void LoadQuestionExample()
         {
